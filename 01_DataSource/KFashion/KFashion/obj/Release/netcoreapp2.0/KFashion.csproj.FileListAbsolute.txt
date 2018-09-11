@@ -1,0 +1,12 @@
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\bin\Release\netcoreapp2.0\KFashion.deps.json
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\bin\Release\netcoreapp2.0\KFashion.runtimeconfig.json
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\bin\Release\netcoreapp2.0\KFashion.runtimeconfig.dev.json
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\bin\Release\netcoreapp2.0\KFashion.dll
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\bin\Release\netcoreapp2.0\KFashion.pdb
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.csprojAssemblyReference.cache
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.csproj.CoreCompileInputs.cache
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.AssemblyInfoInputs.cache
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.AssemblyInfo.cs
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.dll
+D:\Project\KFashion_2018\01_DataSource\KFashion\KFashion\obj\Release\netcoreapp2.0\KFashion.pdb
