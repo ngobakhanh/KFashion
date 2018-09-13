@@ -10,9 +10,9 @@ namespace KFashion.Services
 {
     public class ProductService : IProductService
     {
-        public IEnumerable<Product> GetAllProduct()
+        public IEnumerable<Product> GetAllProduct(int productIndex)
         {
-            return SqlHelper.QuerySQL<Product>("PRODUCT_GETALL");
+            return SqlHelper.QuerySP<Product>("PRODUCT_GETALL",new { @PRODUCT_INDEX = productIndex});
         }
 
         ProductDetail IProductService.GetProductById(int productId)

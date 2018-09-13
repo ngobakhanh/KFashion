@@ -28,9 +28,10 @@ namespace KFashion.Controllers
         }
 
         //[Route("san-pham/{id?}")]
-        public IActionResult Product(string categoryId)
+        public IActionResult Product(int productIndex)
         {
-            var model = _productService.GetAllProduct();
+            ViewData["ProductIndex"] = productIndex;
+            var model = _productService.GetAllProduct(productIndex);
             return View(model);
         }
 

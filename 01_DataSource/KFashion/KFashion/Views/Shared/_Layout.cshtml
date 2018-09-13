@@ -235,7 +235,6 @@
     <!-- Main -->
     <script src="~/Assets/js/main.js"></script>
     <script>
-
             $(document).ready(function () {
 
                 var quantitiy = 0;
@@ -292,7 +291,53 @@
 
                 });
 
+                $('.btn-read-more').click(function () {
+                    FetchDataFromServer();
+                });
+
         });
+
+        function FetchDataFromServer() {
+            //var index = parseInt($('#product_index').val()) + 6;
+            //$('#product_index').val(index);
+            var index = parseInt($('div.product-entry').length);
+            console.log(index);
+            var html = '';
+            $.ajax("/api/product/GetListProduct", {
+                type: "GET",
+                contentType: "application/json",
+                data: { productIndex: index},
+                dataType: "json",
+                success: function (data) {
+                    data.forEach(function (product) {
+                        html += '<div class="col-md-4 text-center">';
+                        html += '	<div class="product-entry">';
+                        html += '		<div class="product-img" style="background-image: url(' + product.IMAGE+');">';
+                        html += '			<p class="tag"><span class="new">New</span></p>';
+                        html += '			<div class="cart">';
+                        html += '				<p>';
+                        html += '					<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> ';
+                        html += '					<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> ';
+                        html += '					<span><a href="/Home/ProductDetail?productId=' + product.PRODUCT_ID+'"><i class="icon-heart3"></i></a></span>';
+                        html += '					<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>';
+                        html += '				</p>';
+                        html += '			</div>';
+                        html += '		</div>';
+                        html += '		<div class="desc">';
+                        html += '			<h3><a href="product-detail.html">' + product.NAME+'</a></h3>';
+                        html += '			<p class="price"><span>' + product.PRICE.toFixed(3) + 'đ </span><span class="sale">' + product.OLD_PRICE.toFixed(3) +'đ</span></p>';
+                        html += '		</div>';
+                        html += '	</div>';
+                        html += '</div>';
+                       
+                    });
+                    $('#product-list').append(html);
+                },
+                error: function () {
+                    alert('error');
+                }
+            });
+        }
 
     </script>
 </body>

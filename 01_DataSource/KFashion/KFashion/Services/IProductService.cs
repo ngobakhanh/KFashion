@@ -8,7 +8,7 @@ namespace KFashion.Services
 {
     public interface IProductService
     {
-        IEnumerable<Product> GetAllProduct();
+        IEnumerable<Product> GetAllProduct(int productIndex);
         ProductDetail GetProductById(int productId);
     }
 }
